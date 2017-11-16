@@ -26,6 +26,7 @@ public class Database {
 		}
 		conexao.setAutoCommit(false);
 	}
+	
 	public boolean createTablePrevisao() throws SQLException{
 		Statement stmt = conexao.createStatement();
 		String sql = "create table if not exists tbprevisao( " +
@@ -55,4 +56,5 @@ public class Database {
 		stmt.close();
 		return true;
 	}
+	public Object query(String s) {return null;}
 }
