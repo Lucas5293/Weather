@@ -66,3 +66,31 @@ Esse programa pega o clima dos próximos 7 dias da cidade selecionada.
 
 >>#### Métodos implementados (Cidade)
 >>![Alt text](prints/print21.png)
+
+### Classe Cidades
+
+#### setUp do teste e método getCidade (CidadesTest)
+![Alt text](prints/print22.png)
+
+>>#### Métodos implementados (Cidades)
+>>![Alt text](prints/print23.png)
+
+### Classe Previsao
+
+#### setUp do teste (PrevisaoTest)
+![Alt text](prints/print24.png)
+
+#### getters e setters (PrevisaoTest)
+![Alt text](prints/print25.png)
+![Alt text](prints/print26.png)
+
+>>#### Métodos implementados (Previsao)
+>>![Alt text](prints/print27.png)
+
+### Classe Previsões
+
+#### setUp do teste e método getPrevisao (PrevisoesTest)
+![Alt text](prints/print28.png)
+
+>>#### Métodos implementados (Previsoes)
+>>![Alt text](prints/print29.png)
