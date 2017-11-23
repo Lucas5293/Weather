@@ -54,3 +54,15 @@ Esse programa pega o clima dos próximos 7 dias da cidade selecionada.
 
 >>#### Métodos implementados (Api)
 >>![Alt text](prints/print17.png)
+
+### Classe Cidade
+
+#### setUp do teste (CidadeTest)
+![Alt text](prints/print18.png)
+
+#### getters e setters (CidadeTest)
+![Alt text](prints/print19.png)
+![Alt text](prints/print20.png)
+
+>>#### Métodos implementados (Cidade)
+>>![Alt text](prints/print21.png)
