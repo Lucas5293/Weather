@@ -39,6 +39,7 @@ public class DatabaseTest {
 	@Test
 	public void testInsertCidade() throws SQLException {
 		Cidade cidade = new Cidade();
+		cidade.setId(1);
 		assertTrue(database.insertCidade(cidade));
 	}
 	@Test

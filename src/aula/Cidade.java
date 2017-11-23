@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "cidade")
-@XmlType(propOrder = {"nome", "uf", "id", "atualizacao"})
+@XmlType(propOrder = {"nome", "uf", "id","atualizacao"})
 public class Cidade {
 	@XmlElement(name = "id")
 	private Integer id;
@@ -18,7 +18,7 @@ public class Cidade {
 	private String atualizacao;
 	
 	@XmlTransient
-	public Integer getId(){
+	public int getId(){
 		return id;
 	}
 	
@@ -46,7 +46,6 @@ public class Cidade {
 
 	public String getAtualizacao() {
 		return atualizacao;
-		
 	}
 	
 	public void setAtualizacao(String atualizacao) {

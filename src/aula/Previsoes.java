@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(propOrder = {"atualizacao","previsao"})
 public class Previsoes {
 	
-	private int id = 0;
+	//private int id;
 	
 	@XmlElement
 	private String atualizacao;

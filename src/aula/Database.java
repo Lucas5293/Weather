@@ -58,7 +58,7 @@ public class Database {
 		/* o campo atualizacao irá receber o valor padrão, ou seja, null */
 		String sql = "insert or ignore into tbcidade(id,nome,uf) values(?,?,?)";
 		PreparedStatement stmt = conexao.prepareStatement(sql);
-		stmt.setInt(1, cidade.getId() );
+		stmt.setInt(1, cidade.getId());
 		stmt.setString(2, cidade.getNome() );
 		stmt.setString(3, cidade.getUf() );
 		stmt.execute();

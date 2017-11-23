@@ -47,7 +47,7 @@ public class Api {
 		return resultado;
 	}
 
-	public Cidade[] xmlToObjectCidade(String xml) throws JAXBException {
+	public Cidade[] xmlToObjectCidade(String xml) throws JAXBException{
 		 StringReader sr = new StringReader(xml);
 		 /* a base do XML é uma marcação de nome cidades */
 		 JAXBContext context = JAXBContext.newInstance(Cidades.class);
@@ -56,8 +56,8 @@ public class Api {
 		 return cidades.getCidade();
 	}
 	
-	public Previsao[] xmlToObjectPrevisao(String xml) throws JAXBException {
-		 StringReader sr = new StringReader(xml);
+	public Previsao[] xmlToObjectPrevisao(String xml) throws JAXBException{
+		StringReader sr = new StringReader(xml);
 		 /* a base do XML é uma marcação de nome cidades */
 		 JAXBContext context = JAXBContext.newInstance(Previsoes.class);
 		 Unmarshaller un = context.createUnmarshaller();
