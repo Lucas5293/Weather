@@ -48,7 +48,7 @@ public class Database {
 	public boolean createTableCidade() throws SQLException {
 		Statement stmt = conexao.createStatement();
 		String sql = "create table if not exists tbcidade( " + "id int not null," + "nome char(60) not null,"
-				+ "uf char(2) not null," + "atualizacao date not null," + "primary key (id)" + ")";
+				+ "uf char(2) not null," + "atualizacao date," + "primary key (id)" + ")";
 		stmt.executeUpdate(sql);
 		stmt.close();
 		return true;
@@ -56,7 +56,7 @@ public class Database {
 
 	public boolean insertCidade(Cidade cidade) throws SQLException {
 		/* o campo atualizacao irá receber o valor padrão, ou seja, null */
-		String sql = "insert or ignore into tbcidade(id,nome,uf) values(?,?,?)";
+		String sql = "insert into tbcidade(id,nome,uf) values(?,?,?)";
 		PreparedStatement stmt = conexao.prepareStatement(sql);
 		stmt.setInt(1, cidade.getId());
 		stmt.setString(2, cidade.getNome() );
@@ -69,7 +69,7 @@ public class Database {
 
 	public boolean insertPrevisao(Previsao previsao) throws SQLException {
 		 /* o campo atualizacao irá receber o valor padrão, ou seja, null */
-		 String sql = "insert or ignore into tbprevisao(id,dia,tempo,minima,maxima,iuv) values(?,?,?,?,?,?)";
+		 String sql = "insert into tbprevisao(id,dia,tempo,minima,maxima,iuv) values(?,?,?,?,?,?)";
 		 PreparedStatement stmt = conexao.prepareStatement(sql);
 		 stmt.setInt(1, previsao.getId());
 		 stmt.setString(2, previsao.getDia());
@@ -83,7 +83,7 @@ public class Database {
 		 return true;
 	}
 
-	public Object selectCidade(String sql) throws SQLException {
+	public List<Cidade>  selectCidade(String sql) throws SQLException {
 		Statement stmt = conexao.createStatement();
 		 ResultSet rs = stmt.executeQuery(sql);
 		 List<Cidade> lista = new ArrayList<>();
@@ -103,7 +103,7 @@ public class Database {
 		 return lista;
 	}
 
-	public Object selectPrevisao(String sql) throws SQLException, ParseException{
+	public List<Previsao> selectPrevisao(String sql) throws SQLException, ParseException{
 		 Statement stmt = conexao.createStatement();
 		 ResultSet rs = stmt.executeQuery(sql);
 		 List<Previsao> lista = new ArrayList<>();

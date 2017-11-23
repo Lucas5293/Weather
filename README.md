@@ -94,3 +94,9 @@ Esse programa pega o clima dos próximos 7 dias da cidade selecionada.
 
 >>#### Métodos implementados (Previsoes)
 >>![Alt text](prints/print29.png)
+
+### Classe ControladorPrevisao
+
+#### setUp do teste e método getPrevisao (ControladorPrevisaoTest)
+![Alt text](prints/print30.png)
+
