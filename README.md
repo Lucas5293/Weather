@@ -6,11 +6,20 @@ Esse programa pega o clima dos próximos 7 dias da cidade selecionada.
 
 ### Classe Database
 
-#### Métodos createTable
+#### Métodos createTable (DatabaseTest)
 ![Alt text](prints/print1.png)
 
-#### Código Gerado
-![Alt text](prints/print2.png)
+>>##### Código Gerado (Database)
+>>![Alt text](prints/print2.png)
 
-#### Métodos implementados
-![Alt text](prints/print3.png)
+>>##### Métodos implementados (Database)
+>>![Alt text](prints/print3.png)
+
+#### Métodos insert (DatabaseTest)
+![Alt text](prints/print4.png)
+
+>>#### Código Gerado (Database)
+>>![Alt text](prints/print5.png)
+
+>>#### Métodos implementados (Database)
+>>![Alt text](prints/print6.png)
