@@ -6,16 +6,19 @@ import java.io.IOException;
 import java.text.ParseException;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.xml.sax.SAXException;
 
 public class PrevisaoTest {
 
 	private Previsao previsao;
 	
 	@Before
-	public void setUp() throws IOException, JAXBException {
+	public void setUp() throws IOException, JAXBException, ParserConfigurationException, SAXException, TransformerException {
 		Api api = new Api();
 		String xml = (String) api.getXMLPrevisao("4963");
 		previsao = api.xmlToObjectPrevisao(xml)[0];
