@@ -32,14 +32,25 @@ Esse programa pega o clima dos próximos 7 dias da cidade selecionada.
 
 >>#### Métodos implementados (Database)
 >>![Alt text](prints/print9.png)
+>>![Alt text](prints/print10.png)
 
 ### Classe Api
 
 #### Métodos getXML (ApiTest)
-![Alt text](prints/print10.png)
+![Alt text](prints/print11.png)
 
 >>#### Código Gerado (Api)
->>![Alt text](prints/print11.png)
+>>![Alt text](prints/print12.png)
 
 >>#### Métodos implementados (Api)
->>![Alt text](prints/print12.png)
+>>![Alt text](prints/print13.png)
+>>![Alt text](prints/print14.png)
+
+#### Métodos xmlToObject (ApiTest)
+![Alt text](prints/print15.png)
+
+>>#### Código Gerado (Api)
+>>![Alt text](prints/print16.png)
+
+>>#### Métodos implementados (Api)
+>>![Alt text](prints/print17.png)
