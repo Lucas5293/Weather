@@ -8,7 +8,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class Database {
@@ -56,7 +60,7 @@ public class Database {
 
 	public boolean insertCidade(Cidade cidade) throws SQLException {
 		/* o campo atualizacao irá receber o valor padrão, ou seja, null */
-		String sql = "insert into tbcidade(id,nome,uf) values(?,?,?)";
+		String sql = "insert or ignore into tbcidade(id,nome,uf) values(?,?,?)";
 		PreparedStatement stmt = conexao.prepareStatement(sql);
 		stmt.setInt(1, cidade.getId());
 		stmt.setString(2, cidade.getNome() );
@@ -69,7 +73,7 @@ public class Database {
 
 	public boolean insertPrevisao(Previsao previsao) throws SQLException {
 		 /* o campo atualizacao irá receber o valor padrão, ou seja, null */
-		 String sql = "insert into tbprevisao(id,dia,tempo,minima,maxima,iuv) values(?,?,?,?,?,?)";
+		 String sql = "insert or ignore into tbprevisao(id,dia,tempo,minima,maxima,iuv) values(?,?,?,?,?,?)";
 		 PreparedStatement stmt = conexao.prepareStatement(sql);
 		 stmt.setInt(1, previsao.getId());
 		 stmt.setString(2, previsao.getDia());
@@ -122,6 +126,28 @@ public class Database {
 		 stmt.close();
 		 conexao.commit();
 		 return lista;
+	}
+
+	public boolean dropPrevisao(int i) throws SQLException {
+		PreparedStatement stmt = conexao.prepareStatement("delete from tbprevisao where id="+i+";");
+		stmt.execute();
+		stmt.close();
+		conexao.commit();
+		return true;
+	}
+
+	public boolean updateCidade(int id) throws SQLException {
+		Calendar calendar = new GregorianCalendar();
+		Date today = new Date();
+		calendar.setTime(today);	
+		SimpleDateFormat formatador = new SimpleDateFormat("MM/dd/yyyy");
+		String hoje = formatador.format(today);
+				
+		PreparedStatement stmt = conexao.prepareStatement("update tbcidade set atualizacao = \'"+hoje+"\' where id = "+id+";");
+		stmt.execute();
+		stmt.close();
+		conexao.commit();
+		return true;
 	}
 
 	

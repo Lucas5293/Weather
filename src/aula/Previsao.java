@@ -88,7 +88,7 @@ public class Previsao {
 	}
 	
 	public String toString(){
-		return "Id"+getId()+"\nDia: " + getDia() + "\nTempo: " + getTempo() +  "\nIUV: " + getIuv() + "\nMínima: " + getMin() + "\nMáxima: " + getMax();	
+		return "\nDia: " + getDia() + "\nTempo: " + getTempo() +  "\nIUV: " + getIuv() + "\nMínima: " + getMin() + "\nMáxima: " + getMax();	
 	}
 
 }

@@ -2,15 +2,10 @@ package aula;
 
 import java.sql.SQLException;
 import java.text.ParseException;
-
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.mockito.Mock;
 
 public class DatabaseTest {
 	
@@ -45,7 +40,17 @@ public class DatabaseTest {
 	@Test
 	public void testInsertPrevisao() throws SQLException {
 		Previsao previsao = new Previsao();
-		assertTrue(database.insertPrevisao(previsao));
+		//assertTrue(database.insertPrevisao(previsao));
+	}
+	
+	@Test
+	public void testDropPrevisao() throws SQLException {
+		assertTrue(database.dropPrevisao(0));
+	}
+	
+	@Test
+	public void testUpdateCidade() throws SQLException {
+		assertTrue(database.updateCidade(4963));
 	}
 	
 	@Test 

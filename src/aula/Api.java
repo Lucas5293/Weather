@@ -1,14 +1,9 @@
 package aula;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
 
 import javax.xml.bind.JAXBContext;
@@ -32,7 +27,7 @@ public class Api {
 	public String getXMLCidade(String cidade) throws IOException, ParserConfigurationException, SAXException, TransformerException {
 		
 		String charset = java.nio.charset.StandardCharsets.ISO_8859_1.name();
-		String linha, resultado = "";
+		String resultado = "";
 		String urlListaCidade = "http://servicos.cptec.inpe.br/XML/listaCidades?city=%s";
 		/* codifica os parâmetros */
 		String parametro = String.format(urlListaCidade, URLEncoder.encode(cidade, charset) );
@@ -50,7 +45,7 @@ public class Api {
 
 	public String getXMLPrevisao(String id) throws IOException, ParserConfigurationException, SAXException, TransformerException {
 		String charset = java.nio.charset.StandardCharsets.ISO_8859_1.name();
-		String linha, resultado = "";
+		String resultado = "";
 		String urlListaCidade = "http://servicos.cptec.inpe.br/XML/cidade/7dias/%s/previsao.xml";
 		/* codifica os parâmetros */
 		String parametro = String.format(urlListaCidade, URLEncoder.encode(id, charset) );

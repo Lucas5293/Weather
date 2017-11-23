@@ -1,5 +1,10 @@
 package aula;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -51,6 +56,15 @@ public class Cidade {
 	public void setAtualizacao(String atualizacao) {
 		this.atualizacao = atualizacao;
 		
+	}
+	
+	public void defaultAtualizacao() {
+		Calendar calendar = new GregorianCalendar();
+		Date today = new Date();
+		calendar.setTime(today);	
+		SimpleDateFormat formatador = new SimpleDateFormat("MM/dd/yyyy");
+		String hoje = formatador.format(today);
+		setAtualizacao(hoje);
 	}
 	
 	public String toString(){
