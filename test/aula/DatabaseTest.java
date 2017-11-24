@@ -40,7 +40,7 @@ public class DatabaseTest {
 	@Test
 	public void testInsertPrevisao() throws SQLException {
 		Previsao previsao = new Previsao();
-		//assertTrue(database.insertPrevisao(previsao));
+		assertTrue(database.insertPrevisao(previsao));
 	}
 	
 	@Test
